@@ -1,16 +1,48 @@
-# hotspot_hosts
+# Hotspot Hosts – Onboarding Questionnaire
 
-A new Flutter project.
+A Flutter application for onboarding **Hotspot Hosts**, designed to assess potential hosts through experience selection and intent-based questions with multimedia input.
 
-## Getting Started
+Hotspot Hosts facilitate community events and gatherings.  
+This onboarding flow helps evaluate their intent, creativity, and readiness by collecting textual, audio, and video responses in a clean, interactive interface.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+##  Implemented Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 1. Experience Type Selection Screen
+- Fetches experiences from API.
+- Supports multiple selection & deselection.
+- Cards show grayscale when unselected.
+- Includes a multi-line textfield (limit: 600 characters).
+- Navigates to the onboarding question screen.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 2. Onboarding Question Screen
+- Multi-line textfield (limit: 600 characters).
+- **Audio Recording** with live waveform animation.
+- **Video Recording** using the device camera.
+- Option to cancel while recording.
+- Delete existing recordings.
+- UI dynamically hides record buttons when assets exist.
+- Responsive layout — handles keyboard visibility safely.
+- “Next” button animates width when record buttons disappear.
+
+---
+
+## Brownie Points Implemented
+- State management handled via **Riverpod**.
+- Local storage using **Hive** for saving and retrieving recordings.
+- Optional playback for audio and video implemented.
+- Safe disposal of controllers to prevent app freeze.
+---
+
+## ⚙️ Tech Stack
+- **Flutter**
+- **Riverpod** (state management)
+- **Dio** (API integration)
+- **Hive** (local storage)
+- **record / camera / audio_waveforms** (recording)
+- **path_provider** (file management)
+
+---
+
+
